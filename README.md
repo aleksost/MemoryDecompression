@@ -3,7 +3,9 @@ Tool to decompress data from Windows 10 page files and memory dumps, that has be
 
 ## Usage
 ``` MemoryDecompression.exe <input file or directory> <output-file> ```\
-When the input is a directory, the tool decompresses all the containing files.
+When the input is a directory, the tool decompresses all the containing files. 
+
+Example on a VADDUMP-segment: \
 ```ps
 PS > .\MemoryDecompression.exe "VADDUMP-segment-compressed.bin" "VADDUMP-segment-decompressed.bin"
 Decompressing    VADDUMP-segment-compressed.bin
