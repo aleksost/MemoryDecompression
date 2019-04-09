@@ -6,7 +6,7 @@ Tool to decompress data from Windows 10 page files and memory dumps, that has be
 When the input is a directory, the tool decompresses all the containing files. 
 
 ### Example on a memory dump:
-The tool can be run on directly on a memory dump, but this can take a really long time, and has not been tested much at this point. I recommend using a tool like Volatility to dump the Virtual Address Descriptors (vaddump: https://github.com/volatilityfoundation/volatility/wiki/Command-Reference#vaddump). After dumping it to the case folder, run MemoryCompression with the vaddump directory as input. 
+The tool can be run on directly on a memory dump, but this can take a really long time, and has not been tested much at this point. I recommend using a tool like Volatility to dump the Virtual Address Descriptors from the MemCompression process (vaddump: https://github.com/volatilityfoundation/volatility/wiki/Command-Reference#vaddump). The vaddump plugin requires a pid, an offset or a name to properly dump the MemCompression process, and an output directory. After dumping it to the case folder, run MemoryCompression with the vaddump directory as input. The decompressed data is always written to a single output file.
 
 ```ps
 PS > .\MemoryDecompression.exe "C:\Users\Analyst\CaseXYZ\vaddump" "C:\Users\Analyst\CaseXYZ\vaddump-decompressed.bin"
